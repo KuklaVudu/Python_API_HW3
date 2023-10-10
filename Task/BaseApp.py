@@ -8,14 +8,13 @@ with open("testdata.yaml") as f:
     url = testdata["url"]
     url_login = testdata["url_login"]
 
-class BasePage:
 
+class BasePage:
     def __init__(self, driver):
         self.driver = driver
         self.base_url = url
 
     def find_element(self, locator, times=10):
-      
         return WebDriverWait(self.driver, times).until(EC.presence_of_element_located(locator), message="Элемент не найден")
 
     def get_element_property(self, locator, property):

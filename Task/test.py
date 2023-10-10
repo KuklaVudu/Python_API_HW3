@@ -1,9 +1,11 @@
 import time
-
 import pytest
 from testpage import OperationHelper
+
+
 username = "ElenaIvan"
 password = "b0f5c4418d"
+
 
 def test_step_1(browser):
     test_page1 = OperationHelper(browser)
